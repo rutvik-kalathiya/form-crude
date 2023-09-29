@@ -72,21 +72,28 @@ export default class Form extends Component {
       <div>
         <h3 style={{textAlign:'center'}}>Contact Form</h3>
         <div className="container">
-            <label>First Name</label>
-            <input type="text" id="fname" name="fname" value={userDetails.fname} placeholder="Your name.." onChange={(e) =>this.handleChange(e)} />
-            <label>Last Name</label>
-            <input type="text" id="lname" name="lname" placeholder="Your last name.." onChange={(e) =>this.handleChange(e)} value={userDetails.lname}/>
-
-            <label>Country</label>
-            <select id="country" name="country" onChange={(e) =>this.handleChange(e)} value={userDetails.country}>
-              <option value="">Select your country</option>
-              <option value="india">India</option>
-              <option value="brazil">Brazil</option>
-              <option value="australia">Australia</option>
-              <option value="canada">Canada</option>
-              <option value="usa">USA</option>
-            </select>
-            <button type="button" value="Submit" onClick={() => this.handleSubmit()}>Submit </button>
+            <div className="row">
+              <label>First Name</label>
+              <input type="text" id="fname" name="fname" value={userDetails.fname} placeholder="Your name.." onChange={(e) =>this.handleChange(e)} />
+            </div>
+            <div className="row">
+              <label>Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Your last name.." onChange={(e) =>this.handleChange(e)} value={userDetails.lname}/>
+            </div>
+            <div className="row">
+              <label>Country</label>
+              <select id="country" name="country" onChange={(e) =>this.handleChange(e)} value={userDetails.country}>
+                <option value="">Select your country</option>
+                <option value="india">India</option>
+                <option value="brazil">Brazil</option>
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+            </div>
+            <div className="row">
+              <button type="button" value="Submit" onClick={() => this.handleSubmit()}>Submit </button>
+            </div>
         </div>
         <h2 style={{textAlign:"center"}}>User Data Table</h2>
         <table>
